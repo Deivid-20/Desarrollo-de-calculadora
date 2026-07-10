@@ -9,15 +9,16 @@ void main() {
         IO.println("1. Sumar");
         IO.println("2. Restar");
         IO.println("3. Multiplicar");
+        IO.println("4. Dividir");
         IO.println("0. Salir");
         IO.println("-".repeat(20));
 
-        String opcion = IO.readln("Seleccione una opcion (0-3): ");
+        String opcion = IO.readln("Seleccione una opcion (0-4): ");
         IO.println(opcion);
 
-        while (!opcion.matches("[0-3]")) {
+        while (!opcion.matches("[0-4]")) {
             IO.println("¡Error! '" + opcion + "' no es una opcion valida.");
-            opcion = IO.readln("Seleccione una opcion (0-3) nuevamente: ");
+            opcion = IO.readln("Seleccione una opcion (0-4) nuevamente: ");
             IO.println(opcion);
         }
 
@@ -60,7 +61,16 @@ void main() {
                 int resultadoMultiplicacion = numero1 * numero2;
                 IO.println("El resultado de la multiplicacion es: " + resultadoMultiplicacion);
                 break;
+            case "4":
 
+                if (numero2 == 0) {
+                    IO.println("¡Error! No es posible dividir entre cero");
+                } else {
+
+                    double resultadoDivision = (double) numero1 / numero2;
+                    IO.println("El resultado de la division es: " + resultadoDivision);
+                }
+                break;
         }
 
         IO.println("-".repeat(20));
