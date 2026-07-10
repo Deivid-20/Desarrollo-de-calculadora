@@ -7,15 +7,16 @@ void main() {
     while (continuar) {
         IO.println("\n=== MENU CALCULADORA ===");
         IO.println("1. Sumar");
+        IO.println("2. Restar");
         IO.println("0. Salir");
         IO.println("-".repeat(20));
 
-        String opcion = IO.readln("Seleccione una opcion (0-1): ");
+        String opcion = IO.readln("Seleccione una opcion (0-2): ");
         IO.println(opcion);
 
-        while (!opcion.matches("[0-1]")) {
+        while (!opcion.matches("[0-2]")) {
             IO.println("¡Error! '" + opcion + "' no es una opcion valida.");
-            opcion = IO.readln("Seleccione una opcion (0-1) nuevamente: ");
+            opcion = IO.readln("Seleccione una opcion (0-2) nuevamente: ");
             IO.println(opcion);
         }
 
@@ -49,6 +50,10 @@ void main() {
             case "1":
                 int resultadoSuma = numero1 + numero2;
                 IO.println("El resultado de la suma es: " + resultadoSuma);
+                break;
+            case "2":
+                int resultadoResta = numero1 - numero2;
+                IO.println("El resultado de la resta es: " + resultadoResta);
                 break;
 
         }
