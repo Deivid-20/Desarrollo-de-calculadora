@@ -5,7 +5,8 @@ void main() {
     boolean continuar = true;
 
     while (continuar) {
-        IO.println("\n=== MENU CALCULADORA ===");
+        //Se elimina el salto de /n para una mejor presentacion en el menu
+        IO.println("=== MENU CALCULADORA ===");
         IO.println("1. Sumar");
         IO.println("2. Restar");
         IO.println("3. Multiplicar");
